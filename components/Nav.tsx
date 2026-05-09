@@ -40,9 +40,7 @@ export default function Nav() {
           scrolled ? 'glass !rounded-none border-b border-black/5' : 'border-b border-transparent'
         }`}
       >
-        <a href="#top" onClick={scrollTo('#top')} className="flex items-center">
-          <img src="/images/logo.png" alt="AXIS" className="h-16 md:h-20 w-auto" />
-        </a>
+        <a href="#top" onClick={scrollTo('#top')} className="flex items-center" />
 
         {/* Desktop nav */}
         <ul className="hidden md:flex gap-9 list-none">
