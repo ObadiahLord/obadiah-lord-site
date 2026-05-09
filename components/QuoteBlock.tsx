@@ -67,7 +67,7 @@ export default function QuoteBlock({
         transition={{ duration: 0.8 }}
         className={`col-span-12 md:col-span-5 ${reverse ? 'md:order-2 md:col-start-8' : ''}`}
       >
-        <div className="shimmer-img relative aspect-square overflow-hidden bg-ink/5 glass">
+        <div className="relative aspect-square overflow-hidden bg-ink/5 glass">
           <img
             src={img}
             alt={alt ?? ''}

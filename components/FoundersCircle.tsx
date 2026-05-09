@@ -10,13 +10,14 @@ export default function FoundersCircle() {
   return (
     <section id="circle" className="relative px-5 py-20 md:px-[110px] md:py-40 bg-ink text-paper">
       <div className="grid grid-cols-12 gap-6 md:gap-10 items-end mb-12 md:mb-16">
-        <div className="col-span-12 md:col-span-3">
+        <div className="col-span-12 md:col-span-3 flex flex-col gap-4">
           <div className="text-[11px] tracking-[0.22em] uppercase text-paper/50">Founders Circle</div>
+          <img src="/images/unnamed.png" alt="Founders Circle" className="w-16 h-16 opacity-80 invert" />
         </div>
         <div className="col-span-12 md:col-span-9">
           <h2 className="font-light tracking-tighter leading-[0.95]"
               style={{ fontSize: 'clamp(64px, 7vw, 120px)' }}>
-            Sunday Sessions.
+            Founders Circle.
           </h2>
           <p className="mt-6 text-[17px] text-paper/70 max-w-[60ch]">
             A weekly meeting for <strong className="font-semibold text-paper">founders building real things</strong>.
