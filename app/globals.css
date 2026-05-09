@@ -27,7 +27,7 @@ body {
   overflow-x: hidden;
 }
 
-::selection { background: var(--ink); color: var(--paper); }
+::selection { background: #0066CC; color: #ffffff; }
 
 ::-webkit-scrollbar { width: 0; }
 
