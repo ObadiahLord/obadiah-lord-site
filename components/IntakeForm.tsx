@@ -15,11 +15,6 @@ export default function IntakeForm({ open, onClose }: Props) {
     const data = Object.fromEntries(new FormData(form).entries())
     setStatus('sending')
     setErrorMsg('')
-    if (typeof data._gotcha === 'string' && data._gotcha.length > 0) {
-      setStatus('sent')
-      form.reset()
-      return
-    }
     try {
       const res = await fetch('https://formsubmit.co/ajax/obadiahbusiness@gmail.com', {
         method: 'POST',
@@ -95,14 +90,6 @@ export default function IntakeForm({ open, onClose }: Props) {
                 </h3>
 
                 <form onSubmit={submit} className="mt-7 grid gap-5">
-                  <input
-                    type="text"
-                    name="_gotcha"
-                    tabIndex={-1}
-                    autoComplete="off"
-                    aria-hidden="true"
-                    style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0, pointerEvents: 'none' }}
-                  />
                   <Field name="name" label="Your name" required />
                   <Field name="email" label="Email" type="email" required />
                   <Field name="company" label="Company or project" />
