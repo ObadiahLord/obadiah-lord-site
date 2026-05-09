@@ -12,7 +12,7 @@ export default function FoundersCircle() {
       <div className="grid grid-cols-12 gap-6 md:gap-10 items-end mb-12 md:mb-16">
         <div className="col-span-12 md:col-span-3 flex flex-col gap-4">
           <div className="text-[11px] tracking-[0.22em] uppercase text-paper/50">Founders Circle</div>
-          <img src="/images/unnamed.png" alt="Founders Circle" className="w-40 h-40 object-contain opacity-90" style={{ filter: 'brightness(0) invert(1)' }} />
+          <img src="/images/unnamed.png" alt="Founders Circle" className="w-36 h-36 object-contain opacity-90" style={{ filter: 'brightness(0) invert(1)' }} />
         </div>
         <div className="col-span-12 md:col-span-9">
           <h2 className="font-light tracking-tighter leading-[0.95]"
@@ -32,17 +32,16 @@ export default function FoundersCircle() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ y: -8, scale: 1.025 }}
             viewport={{ once: true }}
             transition={{ duration: 0.2, ease: [0.2, 0.9, 0.2, 1] }}
-            className="relative overflow-hidden rounded-2xl border border-paper/15 aspect-video bg-paper/5"
+            className="relative overflow-hidden rounded-2xl border border-paper/15 aspect-[4/5] md:aspect-video bg-paper/5"
           >
             <img
               src="/images/founders-meeting.jpg"
               alt="Founders gathered around a working table"
               className="absolute inset-0 h-full w-full object-cover grayscale"
             />
-            <div className="absolute inset-0 bg-ink/55" />
+            <div className="absolute inset-0 bg-ink/40" />
             <div className="absolute inset-x-0 bottom-0 p-6">
               <div className="text-[11px] tracking-[0.22em] uppercase text-paper/55">
                 Founders in the room

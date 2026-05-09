@@ -40,7 +40,13 @@ export default function Nav() {
           scrolled ? 'glass !rounded-none border-b border-black/5' : 'border-b border-transparent'
         }`}
       >
-        <a href="#top" onClick={scrollTo('#top')} className="flex items-center" />
+        <a href="#top" onClick={scrollTo('#top')} className="flex items-center">
+          <img
+            src="/images/unnamed.png"
+            alt="Obadiah Lord"
+            className="w-36 h-36 object-contain"
+          />
+        </a>
 
         {/* Desktop nav */}
         <ul className="hidden md:flex gap-9 list-none">
@@ -63,7 +69,7 @@ export default function Nav() {
               onClick={() => setOpen(true)}
               className="shimmer-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-ink text-paper text-[13px] font-medium"
             >
-              <>Book A Call <span className="text-[11px]">↗</span></>
+              <>Book A Call <span className="text-[11px]" style={{ fontVariantEmoji: 'text' }}>↗︎</span></>
             </MagneticButton>
           </div>
 
@@ -104,7 +110,7 @@ export default function Nav() {
               onClick={() => { setMenuOpen(false); setOpen(true) }}
               className="shimmer-btn mt-6 inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-ink text-paper text-[14px] font-medium w-fit"
             >
-              Book A Call ↗
+              Book A Call <span style={{ fontVariantEmoji: 'text' }}>↗︎</span>
             </button>
           </motion.div>
         )}

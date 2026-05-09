@@ -50,7 +50,6 @@ export default function Blog() {
             key={p.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ y: -8, scale: 1.035 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.17, ease: [0.2, 0.9, 0.2, 1] }}
             className="glass p-7 noise flex flex-col gap-4 min-h-[280px]"

@@ -59,7 +59,6 @@ export default function Axle() {
             key={f.t}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ y: -8, scale: 1.035 }}
             viewport={{ once: true }}
             transition={{ duration: 0.17, delay: i * 0.06, ease: [0.2, 0.9, 0.2, 1] }}
             className="glass noise p-8 min-h-[200px] flex flex-col"

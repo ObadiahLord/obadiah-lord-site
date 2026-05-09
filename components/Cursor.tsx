@@ -1,12 +1,22 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Cursor() {
   const ringRef = useRef<HTMLDivElement>(null)
   const dotRef = useRef<HTMLDivElement>(null)
+  const [isFinePointer, setIsFinePointer] = useState(false)
 
   useEffect(() => {
+    const mq = window.matchMedia('(hover: hover) and (pointer: fine)')
+    setIsFinePointer(mq.matches)
+    const onChange = (e: MediaQueryListEvent) => setIsFinePointer(e.matches)
+    mq.addEventListener('change', onChange)
+    return () => mq.removeEventListener('change', onChange)
+  }, [])
+
+  useEffect(() => {
+    if (!isFinePointer) return
     const ring = ringRef.current
     const dot = dotRef.current
     if (!ring || !dot) return
@@ -32,7 +42,9 @@ export default function Cursor() {
       window.removeEventListener('mousemove', onMove)
       cancelAnimationFrame(raf)
     }
-  }, [])
+  }, [isFinePointer])
+
+  if (!isFinePointer) return null
 
   return (
     <>

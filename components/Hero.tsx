@@ -45,16 +45,17 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-20 pt-[120px] md:pt-[140px] pb-20 md:pb-24 px-6 md:px-[110px] min-h-screen flex flex-col justify-end">
-        {/* Name block */}
+
+        {/* Name block — top-left of hero below nav */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.8 }}
-          className="absolute top-[100px] left-6 md:top-[140px] md:left-[110px]"
+          className="absolute top-[215px] left-6 md:left-[130px]"
         >
           <div
             className="font-light text-ink leading-none tracking-tighter"
-            style={{ fontSize: 'clamp(28px, 4.6vw, 64px)' }}
+            style={{ fontSize: 'clamp(18px, 2.4vw, 36px)' }}
           >
             Obadiah Lord
           </div>
@@ -80,15 +81,6 @@ export default function Hero() {
               </motion.span>
             </span>
           </h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 0.8 }}
-            className="mt-4 text-[15px] md:text-[16px] text-ink max-w-[26ch]"
-          >
-            It is Obadiah, architecting <strong className="font-semibold">Axle</strong>, your
-            <strong className="font-semibold"> AI agent for Android</strong>.
-          </motion.p>
         </div>
       </div>
 

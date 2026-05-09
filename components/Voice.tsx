@@ -46,7 +46,6 @@ export default function Voice() {
             key={q.plate}
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ y: -8, scale: 1.035 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.17, ease: [0.2, 0.9, 0.2, 1] }}
             className={`glass overflow-hidden flex flex-col ${
