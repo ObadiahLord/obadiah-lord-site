@@ -12,7 +12,7 @@ export default function FoundersCircle() {
       <div className="grid grid-cols-12 gap-6 md:gap-10 items-end mb-12 md:mb-16">
         <div className="col-span-12 md:col-span-3 flex flex-col gap-4">
           <div className="text-[11px] tracking-[0.22em] uppercase text-paper/50">Founders Circle</div>
-          <img src="/images/unnamed.png" alt="Founders Circle" className="w-32 h-32 opacity-90" style={{ filter: 'brightness(0) invert(1)' }} />
+          <img src="/images/unnamed.png" alt="Founders Circle" className="w-40 h-40 object-contain opacity-90" style={{ filter: 'brightness(0) invert(1)' }} />
         </div>
         <div className="col-span-12 md:col-span-9">
           <h2 className="font-light tracking-tighter leading-[0.95]"
