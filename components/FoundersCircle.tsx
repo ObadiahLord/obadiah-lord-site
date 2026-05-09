@@ -10,8 +10,7 @@ export default function FoundersCircle() {
   return (
     <section id="circle" className="relative px-5 py-20 md:px-[110px] md:py-40 bg-ink text-paper">
       <div className="grid grid-cols-12 gap-6 md:gap-10 items-end mb-12 md:mb-16">
-        <div className="col-span-12 md:col-span-3 flex flex-col gap-4">
-          <div className="text-[11px] tracking-[0.22em] uppercase text-paper/50">Founders Circle</div>
+        <div className="col-span-12 md:col-span-3 flex flex-col">
           <img src="/images/unnamed.png" alt="Founders Circle" className="w-36 h-36 object-contain opacity-90" style={{ filter: 'brightness(0) invert(1)' }} />
         </div>
         <div className="col-span-12 md:col-span-9">
@@ -34,12 +33,12 @@ export default function FoundersCircle() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.2, ease: [0.2, 0.9, 0.2, 1] }}
-            className="relative overflow-hidden rounded-2xl border border-paper/15 aspect-[4/5] md:aspect-video bg-paper/5"
+            className="relative overflow-hidden rounded-2xl border border-paper/15 aspect-square md:aspect-video bg-paper/5"
           >
             <img
               src="/images/founders-meeting.jpg"
               alt="Founders gathered around a working table"
-              className="absolute inset-0 h-full w-full object-cover grayscale"
+              className="absolute inset-0 h-full w-full object-cover object-right md:object-center grayscale"
             />
             <div className="absolute inset-0 bg-ink/40" />
             <div className="absolute inset-x-0 bottom-0 p-6">
@@ -62,7 +61,7 @@ export default function FoundersCircle() {
               onClick={() => setOpen(true)}
               className="shimmer-btn inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-paper text-ink text-[13px] font-medium"
             >
-              <>Request a seat <span>↗</span></>
+              <>Request a seat <span style={{ fontVariantEmoji: 'text' }}>↗︎</span></>
             </MagneticButton>
           </div>
         </div>

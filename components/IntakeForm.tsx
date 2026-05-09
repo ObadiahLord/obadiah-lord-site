@@ -121,7 +121,7 @@ export default function IntakeForm({ open, onClose }: Props) {
                       className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-full bg-ink text-paper text-[13px] font-medium disabled:opacity-50"
                     >
                       {status === 'sending' ? 'Sending' : 'Send'}
-                      <span className="text-[11px]">{status === 'sending' ? '' : '↗'}</span>
+                      <span className="text-[11px]" style={{ fontVariantEmoji: 'text' }}>{status === 'sending' ? '' : '↗︎'}</span>
                     </button>
                   </div>
                 </form>

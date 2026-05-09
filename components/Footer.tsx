@@ -89,7 +89,7 @@ export default function Footer() {
               className="shimmer-btn inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-ink text-paper text-[13px] font-medium"
             >
               <>
-                Book A Call <span>↗</span>
+                Book A Call <span style={{ fontVariantEmoji: 'text' }}>↗︎</span>
               </>
             </MagneticButton>
           </div>
