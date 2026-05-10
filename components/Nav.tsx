@@ -36,15 +36,15 @@ export default function Nav() {
         initial={{ opacity: 0, y: -12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-        className={`fixed top-0 inset-x-0 z-50 flex items-start md:items-center justify-between px-3 md:px-10 pt-2 md:py-1 pb-1 transition-all duration-500 ${
-          scrolled ? 'glass !rounded-none border-b border-black/5' : 'border-b border-transparent'
+        className={`fixed top-0 inset-x-0 z-50 flex h-16 items-center justify-between px-4 transition-[background,border-color,box-shadow,backdrop-filter] duration-200 md:h-20 md:px-10 ${
+          scrolled ? 'nav-surface border-b border-ink/10' : 'border-b border-transparent'
         }`}
       >
         <a href="#top" onClick={scrollTo('#top')} className="flex items-center -ml-1 md:ml-0">
           <img
             src="/images/unnamed.png"
             alt="Obadiah Lord"
-            className="w-10 h-10 md:w-36 md:h-36 object-contain"
+            className="h-16 w-24 object-contain object-left md:h-28 md:w-28"
           />
         </a>
 

@@ -11,7 +11,12 @@ export default function FoundersCircle() {
     <section id="circle" className="relative px-5 py-20 md:px-[110px] md:py-40 bg-ink text-paper">
       <div className="grid grid-cols-12 gap-6 md:gap-10 items-end mb-12 md:mb-16">
         <div className="col-span-12 md:col-span-3 flex flex-col">
-          <img src="/images/unnamed.png" alt="Founders Circle" className="w-36 h-36 object-contain opacity-90" style={{ filter: 'brightness(0) invert(1)' }} />
+          <img
+            src="/images/unnamed.png"
+            alt="Founders Circle"
+            className="-ml-3 h-16 w-24 object-contain object-left opacity-90 md:ml-0 md:h-36 md:w-36"
+            style={{ filter: 'brightness(0) invert(1)' }}
+          />
         </div>
         <div className="col-span-12 md:col-span-9">
           <h2 className="font-light tracking-tighter leading-[0.95]"
@@ -33,14 +38,19 @@ export default function FoundersCircle() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.2, ease: [0.2, 0.9, 0.2, 1] }}
-            className="relative overflow-hidden rounded-2xl border border-paper/15 aspect-square md:aspect-video bg-paper/5"
+            className="relative overflow-hidden rounded-2xl border border-paper/15 aspect-[4/3] md:aspect-video bg-paper/5"
           >
-            <img
-              src="/images/founders-meeting.jpg"
-              alt="Founders gathered around a working table"
-              className="absolute inset-0 h-full w-full object-cover object-right md:object-center grayscale"
+            <video
+              src="/videos/founders-roundtable.mp4"
+              className="absolute inset-0 h-full w-full object-cover object-center grayscale brightness-[0.62] contrast-110"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              aria-label="Founders having a roundtable conversation"
             />
-            <div className="absolute inset-0 bg-ink/40" />
+            <div className="absolute inset-0 bg-ink/35" />
             <div className="absolute inset-x-0 bottom-0 p-6">
               <div className="text-[11px] tracking-[0.22em] uppercase text-paper/55">
                 Founders in the room
