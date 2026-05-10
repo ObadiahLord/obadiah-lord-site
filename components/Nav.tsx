@@ -40,11 +40,11 @@ export default function Nav() {
           scrolled ? 'nav-surface border-b border-ink/10' : 'border-b border-transparent'
         }`}
       >
-        <a href="#top" onClick={scrollTo('#top')} className="flex items-center -ml-1 md:ml-0">
+        <a href="#top" onClick={scrollTo('#top')} className="flex items-center -ml-9 md:-ml-12">
           <img
             src="/images/unnamed.png"
             alt="Obadiah Lord"
-            className="h-16 w-24 object-contain object-left md:h-28 md:w-28"
+            className="h-16 w-24 object-contain object-left md:h-36 md:w-36"
           />
         </a>
 
