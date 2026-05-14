@@ -7,6 +7,10 @@ const config: Config = {
       colors: {
         ink: '#0A0A0A',
         paper: '#FFFFFF',
+        gold: {
+          DEFAULT: '#E0C37A',
+          deep: '#E0C37A',
+        },
         silver: { DEFAULT: '#7B7B7B', soft: '#B8BCC0' },
       },
       fontFamily: {

@@ -36,7 +36,7 @@ export default function QuoteBlock({
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto max-w-[980px] text-center"
         >
-          <div className="text-[11px] tracking-[0.22em] uppercase text-silver">{eyebrow}</div>
+          <div className="font-label text-[11px] text-gold">{eyebrow}</div>
           <blockquote
             className="mt-6 font-light leading-[1.08] tracking-normal text-ink"
             style={{ fontSize: 'clamp(34px, 4.4vw, 72px)' }}
@@ -44,7 +44,7 @@ export default function QuoteBlock({
             {quote}
           </blockquote>
           {attribution && (
-            <div className="mt-8 text-[12px] tracking-[0.22em] uppercase text-silver">
+            <div className="font-label mt-8 text-[12px] text-gold">
               {attribution}
             </div>
           )}
@@ -65,9 +65,12 @@ export default function QuoteBlock({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.8 }}
-        className={`col-span-12 md:col-span-5 ${reverse ? 'md:order-2 md:col-start-8' : ''}`}
+        className={`gold-outline-hover col-span-12 overflow-hidden rounded-[30px] border border-gold/35 md:col-span-5 ${
+          reverse ? 'md:order-2 md:col-start-8' : ''
+        }`}
       >
-        <div className="relative aspect-square overflow-hidden bg-ink/5 glass">
+        <div className="glass relative aspect-square overflow-hidden bg-ink/5">
+          <div className="gold-accent-line absolute inset-x-0 top-0 z-10 h-[3px]" />
           <img
             src={img}
             alt={alt ?? ''}
@@ -83,15 +86,15 @@ export default function QuoteBlock({
         transition={{ duration: 0.8, delay: 0.1 }}
         className={`col-span-12 md:col-span-6 ${reverse ? 'md:order-1' : 'md:col-start-7'}`}
       >
-        <div className="text-[11px] tracking-[0.22em] uppercase text-silver">{eyebrow}</div>
+        <div className="font-label text-[11px] text-gold">{eyebrow}</div>
         <blockquote
-          className="mt-5 font-light tracking-tighter leading-[1.1] text-ink"
+          className="font-agentic mt-5 font-light tracking-tighter leading-[1.1] text-ink"
           style={{ fontSize: 'clamp(26px, 2.6vw, 38px)' }}
         >
           {quote}
         </blockquote>
         {attribution && (
-          <div className="mt-7 text-[12px] tracking-[0.18em] uppercase text-silver">
+          <div className="font-label mt-7 text-[12px] text-gold">
             {attribution}
           </div>
         )}

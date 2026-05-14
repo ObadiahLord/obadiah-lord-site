@@ -28,7 +28,7 @@ export default function Voice() {
     <section id="voice" className="relative px-[110px] py-40">
       <div className="grid grid-cols-12 gap-10 items-end mb-16">
         <div className="col-span-3">
-          <div className="text-[11px] tracking-[0.22em] uppercase text-silver">Voice</div>
+          <div className="font-label text-[11px] text-silver">Voice</div>
         </div>
         <div className="col-span-9">
           <h2
@@ -64,8 +64,8 @@ export default function Voice() {
               </div>
             </div>
             <figcaption className="p-7">
-              <div className="text-[11px] tracking-[0.22em] uppercase text-silver">{q.title}</div>
-              <p className="mt-3 text-[15px] leading-relaxed text-ink/85">{q.body}</p>
+              <div className="font-label text-[11px] text-silver">{q.title}</div>
+              <p className="mt-3 text-[17px] leading-relaxed text-ink/85">{q.body}</p>
             </figcaption>
           </motion.figure>
         ))}

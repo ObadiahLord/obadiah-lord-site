@@ -14,14 +14,14 @@ export default function Hero() {
         className="hidden md:flex absolute left-9 top-0 bottom-0 z-30 items-center justify-center pointer-events-none"
       >
         <div className="flex flex-col items-center gap-4">
-          <span className="w-px h-20 bg-ink/15" />
+          <span className="h-20 w-px bg-gold" />
           <span
             style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
-            className="text-[12px] tracking-wide text-silver whitespace-nowrap"
+            className="font-luxury-readable whitespace-nowrap text-[12px] tracking-wide text-gold"
           >
-            Founder · Architect · AXIS LABS
+            CEO · Founder · AXIS LABS
           </span>
-          <span className="w-px h-20 bg-ink/15" />
+          <span className="h-20 w-px bg-gold" />
         </div>
       </motion.div>
 
@@ -54,21 +54,24 @@ export default function Hero() {
           className="absolute top-[215px] left-6 md:left-[130px]"
         >
           <div
-            className="font-light text-ink leading-none tracking-tighter"
+            className="font-luxury-readable font-light text-ink leading-none tracking-tighter"
             style={{ fontSize: 'clamp(18px, 2.4vw, 36px)' }}
           >
             Obadiah Lord
           </div>
-          <div className="mt-2 text-[11px] md:text-[12px] text-silver">
-            Founder and CEO, <strong className="font-semibold text-ink">AXIS LABS</strong>
+          <div className="font-luxury-readable mt-2 flex items-center gap-3 text-[11px] md:text-[12px] text-silver">
+            <span className="h-px w-10 gold-accent-line" />
+            <span>
+              CEO of <strong className="font-semibold text-gold">AXIS LABS</strong>
+            </span>
           </div>
         </motion.div>
 
         {/* Hello + tagline */}
         <div>
           <h1
-            className="font-sans font-extralight text-ink m-0 leading-[0.88] tracking-tightest"
-            style={{ fontSize: 'clamp(82px, 19vw, 300px)' }}
+            className="font-agentic font-extralight text-ink m-0 leading-[0.88] tracking-tightest"
+            style={{ fontSize: 'clamp(64px, 15vw, 220px)' }}
           >
             <span className="block overflow-hidden">
               <motion.span
@@ -85,14 +88,14 @@ export default function Hero() {
       </div>
 
       {/* Bottom rail */}
-      <div className="hidden md:block absolute left-9 bottom-7 z-30 text-[12px] text-silver tracking-wide">2026</div>
+      <div className="font-luxury-readable hidden md:block absolute left-9 bottom-7 z-30 text-[12px] tracking-wide text-gold">2026</div>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6, duration: 0.8 }}
         className="absolute left-6 md:left-[110px] bottom-7 z-30 text-[13px] text-ink flex items-center gap-2"
       >
-        Scroll down
+        <span className="gold-hover">Scroll down</span>
         <motion.span animate={{ y: [0, 4, 0] }} transition={{ duration: 1.6, repeat: Infinity }}>
           ↓
         </motion.span>

@@ -61,7 +61,7 @@ export default function Services() {
               <span className="text-[11px] tracking-[0.22em] text-silver">AXIS LABS</span>
             </div>
             <div className="mt-6 text-[24px] font-medium tracking-tight text-ink">{s.t}</div>
-            <p className="mt-3 text-[15px] leading-relaxed text-ink/75">{s.d}</p>
+            <p className="mt-3 text-[17px] leading-relaxed text-ink/75">{s.d}</p>
           </motion.div>
         ))}
       </div>

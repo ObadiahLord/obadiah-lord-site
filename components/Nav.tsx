@@ -55,7 +55,7 @@ export default function Nav() {
               <a
                 href={l.href}
                 onClick={scrollTo(l.href)}
-                className="text-shine text-[13px] cursor-pointer"
+                className="font-luxury-readable nav-link-gold text-[15px] cursor-pointer"
               >
                 {l.label}
               </a>

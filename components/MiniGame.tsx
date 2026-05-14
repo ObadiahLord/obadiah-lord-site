@@ -4,6 +4,8 @@ import { useEffect, useRef } from 'react'
 
 const W = 800
 const H = 260
+const DISPLAY_FONT = '"Agentic", "Bodoni 72", "Didot", "Baskerville", "Times New Roman", serif'
+const READABLE_FONT = '"Baskerville", "Iowan Old Style", "Palatino", "Times New Roman", serif'
 const GROUND = H - 44
 const RX = 72
 const RW = 22
@@ -166,7 +168,7 @@ export default function MiniGame() {
         ctx.fillStyle='#0A0A0A'
         ctx.beginPath(); ctx.moveTo(0,-13); ctx.lineTo(11,-8); ctx.lineTo(11,5)
         ctx.lineTo(0,13); ctx.lineTo(-11,5); ctx.lineTo(-11,-8); ctx.closePath(); ctx.fill()
-        ctx.fillStyle='#F9F9F9'; ctx.font='bold 7px monospace'; ctx.textAlign='center'
+        ctx.fillStyle='#F9F9F9'; ctx.font=`bold 7px ${READABLE_FONT}`; ctx.textAlign='center'
         ctx.fillText('CF',0,3); ctx.restore()
         return
       }
@@ -175,7 +177,7 @@ export default function MiniGame() {
       ctx.setLineDash([3,4]); ctx.strokeStyle='rgba(10,10,10,0.1)'; ctx.lineWidth=1
       ctx.beginPath(); ctx.moveTo(cx,o.oy+o.h); ctx.lineTo(cx,GROUND); ctx.stroke(); ctx.setLineDash([])
       ctx.save(); ctx.translate(cx,cy); ctx.rotate(-Math.PI/2)
-      ctx.fillStyle='rgba(249,249,249,0.75)'; ctx.font='bold 7px monospace'
+      ctx.fillStyle='rgba(249,249,249,0.75)'; ctx.font=`bold 7px ${READABLE_FONT}`
       ctx.textAlign='center'; ctx.fillText(o.label,0,3); ctx.restore()
     }
 
@@ -212,7 +214,7 @@ export default function MiniGame() {
       ctx.fillStyle='#F9F9F9'; ctx.fillRect(0,0,W,H)
 
       // binary rain
-      ctx.font='10px monospace'
+      ctx.font=`10px ${READABLE_FONT}`
       for (const d of s.drops) {
         d.y+=d.speed
         if(d.y>H){d.y=-10;d.x=Math.random()*W;d.char=Math.random()>.5?'1':'0'}
@@ -227,9 +229,9 @@ export default function MiniGame() {
       // header
       ctx.fillStyle='rgba(10,10,10,0.06)'; ctx.fillRect(10,6,148,34)
       ctx.fillStyle='rgba(10,10,10,0.13)'; ctx.fillRect(10,6,148,1)
-      ctx.font='bold 14px monospace'; ctx.fillStyle='rgba(10,10,10,0.8)'
+      ctx.font=`bold 14px ${DISPLAY_FONT}`; ctx.fillStyle='rgba(10,10,10,0.8)'
       ctx.fillText('AGENT AXLE',16,22)
-      ctx.font='9px monospace'; ctx.fillStyle='rgba(10,10,10,0.32)'
+      ctx.font=`9px ${READABLE_FONT}`; ctx.fillStyle='rgba(10,10,10,0.32)'
       ctx.fillText('CLASSIFIED · AXIS LABS',16,35)
       // blink
       s.blinkTimer++
@@ -238,7 +240,7 @@ export default function MiniGame() {
 
       // level banner
       const curLvl = getLvl(s.score)
-      ctx.font='9px monospace'; ctx.textAlign='center'
+      ctx.font=`9px ${READABLE_FONT}`; ctx.textAlign='center'
       ctx.fillStyle='rgba(10,10,10,0.25)'
       ctx.fillText(curLvl.label, W/2, 14)
       ctx.textAlign='left'
@@ -259,15 +261,15 @@ export default function MiniGame() {
         ctx.strokeRect(5,5,W-10,H-10)
         ctx.textAlign='center'
         // eyebrow
-        ctx.font='bold 10px monospace'
+        ctx.font=`bold 10px ${READABLE_FONT}`
         ctx.fillStyle=`rgba(249,249,249,${s.lvlFlash*0.55})`
         ctx.fillText('◉  CLEARANCE UPGRADED  ◉',W/2,H/2-34)
         // big level name
-        ctx.font='bold 34px monospace'
+        ctx.font=`bold 34px ${DISPLAY_FONT}`
         ctx.fillStyle=`rgba(249,249,249,${s.lvlFlash})`
         ctx.fillText(curLvl.label,W/2,H/2+8)
         // speed callout
-        ctx.font='10px monospace'
+        ctx.font=`10px ${READABLE_FONT}`
         ctx.fillStyle=`rgba(249,249,249,${s.lvlFlash*0.45})`
         ctx.fillText(`SPEED ×${curLvl.speed}  ·  THREAT DENSITY INCREASED`,W/2,H/2+32)
         ctx.textAlign='left'
@@ -277,9 +279,9 @@ export default function MiniGame() {
       if(s.phase==='idle'){
         drawAgent(RX,s.y,0,false)
         ctx.textAlign='center'
-        ctx.font='bold 12px monospace'; ctx.fillStyle='rgba(10,10,10,0.52)'
+        ctx.font=`bold 12px ${READABLE_FONT}`; ctx.fillStyle='rgba(10,10,10,0.52)'
         ctx.fillText('[ SPACE OR CLICK TO BEGIN MISSION ]',W/2,H/2+14)
-        ctx.font='10px monospace'; ctx.fillStyle='rgba(10,10,10,0.22)'
+        ctx.font=`10px ${READABLE_FONT}`; ctx.fillStyle='rgba(10,10,10,0.22)'
         ctx.fillText('Jump OVER ground blocks · stay GROUNDED under mid-air threats',W/2,H/2+32)
         ctx.textAlign='left'
         raf.current=requestAnimationFrame(tick); return
@@ -339,7 +341,7 @@ export default function MiniGame() {
         else{
           ctx.fillStyle='#0A0A0A'; ctx.fillRect(o.x,o.oy,o.w,o.h)
           ctx.save(); ctx.translate(o.x+o.w/2,o.oy+o.h/2); ctx.rotate(-Math.PI/2)
-          ctx.fillStyle='rgba(249,249,249,0.7)'; ctx.font='bold 7px monospace'
+          ctx.fillStyle='rgba(249,249,249,0.7)'; ctx.font=`bold 7px ${READABLE_FONT}`
           ctx.textAlign='center'; ctx.fillText(o.label,0,3); ctx.restore()
         }
       }
@@ -347,11 +349,11 @@ export default function MiniGame() {
       drawAgent(RX,s.y,s.legPhase,s.phase==='running')
 
       // status bar
-      ctx.font='10px monospace'; ctx.fillStyle='rgba(10,10,10,0.25)'
+      ctx.font=`10px ${READABLE_FONT}`; ctx.fillStyle='rgba(10,10,10,0.25)'
       ctx.fillText('> '+STATUSES[s.statusIdx],16,H-12)
 
       // OPS
-      ctx.font='bold 12px monospace'; ctx.fillStyle='rgba(10,10,10,0.55)'
+      ctx.font=`bold 12px ${READABLE_FONT}`; ctx.fillStyle='rgba(10,10,10,0.55)'
       ctx.textAlign='right'; ctx.fillText('OPS '+String(s.ops).padStart(5,'0'),W-16,22)
       ctx.textAlign='left'
 
@@ -362,13 +364,13 @@ export default function MiniGame() {
 
       if(s.phase==='dead'){
         ctx.textAlign='center'
-        ctx.font='bold 15px monospace'; ctx.fillStyle='rgba(10,10,10,0.88)'
+        ctx.font=`bold 15px ${DISPLAY_FONT}`; ctx.fillStyle='rgba(10,10,10,0.88)'
         ctx.fillText('// MISSION COMPROMISED //',W/2,H/2-14)
         if(s.killerLabel){
-          ctx.font='10px monospace'; ctx.fillStyle='rgba(10,10,10,0.45)'
+          ctx.font=`10px ${READABLE_FONT}`; ctx.fillStyle='rgba(10,10,10,0.45)'
           ctx.fillText('BLOCKED BY: '+s.killerLabel,W/2,H/2+4)
         }
-        ctx.font='11px monospace'; ctx.fillStyle='rgba(10,10,10,0.32)'
+        ctx.font=`11px ${READABLE_FONT}`; ctx.fillStyle='rgba(10,10,10,0.32)'
         ctx.fillText('[ SPACE OR CLICK TO REDEPLOY ]',W/2,H/2+22)
         ctx.textAlign='left'
       }
@@ -384,9 +386,9 @@ export default function MiniGame() {
 
   return (
     <section className="relative py-24">
-      <div className="mb-5 px-5 md:px-[110px] text-[11px] tracking-[0.22em] uppercase text-silver">Mission briefing</div>
+      <div className="font-label mb-5 px-5 text-[11px] text-silver md:px-[110px]">Mission briefing</div>
       <div className="select-none w-full" style={{cursor:'pointer'}} onClick={jump}>
-        <canvas ref={canvasRef} width={W} height={H} className="w-full block"
+        <canvas ref={canvasRef} width={W} height={H} className="block h-[340px] w-full md:h-auto"
           style={{border:'1px solid rgba(10,10,10,0.07)'}} />
       </div>
       <p className="mt-3 px-5 md:px-[110px] text-[11px] tracking-wide text-ink/35">

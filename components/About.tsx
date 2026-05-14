@@ -5,69 +5,68 @@ import { motion } from 'framer-motion'
 export default function About() {
   return (
     <section id="about" className="relative px-6 py-24 md:px-10 lg:px-[110px] lg:py-32">
-      <div className="grid grid-cols-12 gap-8 lg:gap-10">
+      <div className="grid grid-cols-12 gap-8 lg:gap-12">
         <div className="col-span-12 lg:col-span-2">
-          <div className="text-[11px] tracking-[0.22em] uppercase text-silver">About</div>
+          <div className="font-label text-[11px] text-gold">About</div>
         </div>
 
-        <div className="col-span-12 lg:col-span-10 grid grid-cols-12 items-start gap-8 lg:gap-10">
+        <div className="col-span-12 lg:col-span-10 grid grid-cols-12 items-start gap-8 lg:gap-12">
 
-          {/* Left — all text stacked, constrained to not exceed photo height */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.8 }}
-            className="col-span-12 lg:col-span-7 flex flex-col gap-5"
+            className="col-span-12 lg:col-span-6 flex max-w-[42rem] flex-col gap-5"
           >
-            <h2 className="max-w-[15ch] text-[38px] font-light leading-[1.02] tracking-normal text-ink md:text-[46px] lg:text-[52px]">
-              Built from momentum.
+            <h2 className="font-agentic max-w-[12ch] text-[38px] font-light leading-[1.02] tracking-normal text-ink md:text-[46px] lg:text-[52px]">
+              The man behind the vision.
             </h2>
 
-            <p className="text-[17px] leading-[1.65] text-ink/80">
-              I am Obadiah Lord,{' '}
-              <strong className="font-semibold text-ink">founder and CEO of AXIS LABS</strong>,
-              building <strong className="font-semibold text-ink">Axle</strong>, a proactive AI agent for
-              Android that turns{' '}
-              <strong className="font-semibold text-ink">plain English intent into action</strong>.
+            <p className="font-luxury-readable text-[17px] leading-[1.65] text-ink/80">
+              Obadiah Lord Founder CEO of AXIS LABS
             </p>
 
-            <div className="border-t border-ink/10 pt-5 flex flex-col gap-4 text-[15px] leading-[1.7] text-ink/75">
+            <p className="font-luxury-readable text-[14px] uppercase tracking-[0.28em] text-gold md:text-[16px]">
+              Innovate . Scale . Impact
+            </p>
+
+            <div className="flex flex-col gap-4 border-t border-ink/10 pt-6 text-[17px] leading-[1.8] text-ink/76">
+              <div className="mb-3 flex items-center gap-3">
+                <span className="h-px w-12 gold-accent-line" />
+                <span className="font-label text-[11px] text-gold">About Me</span>
+              </div>
+
               <p>
-                I started young and built an{' '}
-                <strong className="font-semibold text-ink">independent dealership</strong>{' '}
-                early, learning how attention, timing, and pressure turn into momentum. That
-                season taught me to <strong className="font-semibold text-ink">create demand</strong>, move fast,
-                and build without waiting for permission.
+                I am shaped by faith, discipline, pressure, and growth. Every season of my life taught me how to
+                stay grounded, think clearly, and keep moving with purpose.
               </p>
+
               <p>
-                I sharpened that instinct at{' '}
-                <strong className="font-semibold text-ink">Mercedes Benz</strong>, then at{' '}
-                <strong className="font-semibold text-ink">Credit Capital</strong> in high ticket B2B tech
-                sales, where complex products had to become clear decisions. Those rooms trained
-                my eye for intent, psychology, and high stakes execution.
+                <strong className="font-semibold text-ink gold-hover">Mercedes Benz</strong> taught me excellence and presence.
+                <strong className="font-semibold text-ink gold-hover"> Credit Capital</strong> taught me what structure means when people are
+                building something real. <strong className="font-semibold text-ink gold-hover">Leadpilot</strong> pushed me deeper into technology,
+                where communication, automation, and execution started feeling like one language.
               </p>
+
               <p>
-                When AI shifted, I taught myself{' '}
-                <strong className="font-semibold text-ink">full stack AI development</strong>{' '}
-                to build the system I believed was missing. AXIS LABS brings that sales instinct
-                and technical execution into{' '}
-                <strong className="font-semibold text-ink">agents that act across software and devices</strong>{' '}
-                with real purpose.
+                Now that vision lives inside <strong className="font-semibold text-ink gold-hover">AXIS LABS</strong>. What I build is connected to who I
+                am, and I care just as much about the person behind the work as the work itself.
               </p>
+
             </div>
           </motion.div>
 
-          {/* Right — photo, same height anchor */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="col-span-12 lg:col-span-5"
+            className="col-span-12 self-start lg:sticky lg:top-28 lg:col-span-6"
           >
-            <figure className="glass noise ml-auto w-full max-w-[420px] overflow-hidden rounded-[30px]">
-              <div className="relative aspect-[4/5] overflow-hidden bg-ink/5">
+            <figure className="glass noise gold-outline-hover ml-auto w-full max-w-[540px] overflow-hidden rounded-[30px] border border-gold/35">
+              <div className="relative aspect-[4/5] overflow-hidden bg-ink">
+                <div className="absolute inset-x-0 top-0 z-10 h-[3px] gold-accent-line" />
                 <img
                   src="/images/about-obadiah-rolls.jpg"
                   alt="Obadiah Lord standing beside a luxury car"

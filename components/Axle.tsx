@@ -40,12 +40,12 @@ export default function Axle() {
           transition={{ duration: 0.8 }}
         >
           <h2
-            className="font-light tracking-tighter leading-[0.95] text-ink"
+            className="font-agentic font-light tracking-tighter leading-[0.95] text-ink"
             style={{ fontSize: 'clamp(64px, 7vw, 120px)' }}
           >
             Axle.
           </h2>
-          <p className="mt-6 text-[18px] text-ink/75 max-w-[52ch] mx-auto leading-relaxed">
+          <p className="font-luxury-readable mx-auto mt-6 max-w-[52ch] text-[18px] leading-relaxed text-ink/75">
             The AI agent that operates your Android phone.{' '}
             <strong className="font-semibold text-ink">Give it a goal. It handles the rest.</strong>{' '}
             Here is why this is the only approach that scales to real life.

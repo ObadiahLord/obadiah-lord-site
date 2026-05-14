@@ -10,9 +10,9 @@ export default function Footer() {
     <footer id="contact" className="relative px-5 py-20 md:px-[110px] md:py-32">
       <div className="grid grid-cols-12 gap-10 items-end">
         <div className="col-span-12 md:col-span-7">
-          <div className="text-[11px] tracking-[0.22em] uppercase text-silver">Get in touch</div>
+          <div className="font-label text-[11px] text-gold">Get in touch</div>
           <h2
-            className="mt-6 font-light tracking-tightest leading-[0.92] text-ink"
+            className="font-agentic mt-6 font-light tracking-tightest leading-[0.92] text-ink"
             style={{ fontSize: 'clamp(80px, 9vw, 160px)' }}
           >
             Let&apos;s build.
@@ -21,22 +21,22 @@ export default function Footer() {
         <div className="col-span-12 md:col-span-5">
           <ul className="space-y-5">
             <li>
-              <div className="text-[11px] tracking-[0.18em] uppercase text-silver">Email</div>
+              <div className="font-label text-[11px] text-gold">Email</div>
               <a
                 href="mailto:obadiahbusiness@gmail.com"
-                className="text-[18px] text-ink hover:underline"
+                className="font-luxury-readable text-[18px] text-ink hover:underline"
               >
                 obadiahbusiness@gmail.com
               </a>
             </li>
             <li>
-              <div className="text-[11px] tracking-[0.18em] uppercase text-silver">Phone</div>
-              <a href="tel:7023192911" className="text-[18px] text-ink hover:underline">
+              <div className="font-label text-[11px] text-gold">Phone</div>
+              <a href="tel:7023192911" className="font-luxury-readable text-[18px] text-ink hover:underline">
                 702 319 2911
               </a>
             </li>
             <li>
-              <div className="text-[11px] tracking-[0.18em] uppercase text-silver">Social</div>
+              <div className="font-label text-[11px] text-gold">Social</div>
               <div className="flex gap-5 mt-1.5">
                 <a
                   href="https://www.linkedin.com/in/obadiah-lord"
@@ -96,7 +96,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mt-32 pt-8 border-t border-ink/10 flex justify-between text-[11px] tracking-[0.18em] uppercase text-silver font-mono">
+      <div className="font-label mt-32 flex justify-between border-t border-ink/10 pt-8 text-[11px] text-silver">
         <span>© 2026 AXIS LABS</span>
         <span>Las Vegas, NV</span>
         <span>Obadiah Lord</span>

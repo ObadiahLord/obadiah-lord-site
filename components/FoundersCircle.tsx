@@ -17,14 +17,14 @@ export default function FoundersCircle() {
       />
       <div className="mb-12 grid w-full grid-cols-1 items-start gap-6 md:mb-16 md:grid-cols-12 md:gap-10">
         <div className="min-w-0 md:col-start-4 md:col-span-9">
-          <h2 className="font-light tracking-tighter leading-[0.95]"
+          <h2 className="font-agentic font-light tracking-tighter leading-[0.95]"
               style={{ fontSize: 'clamp(64px, 7vw, 120px)' }}>
             Founders Circle.
           </h2>
-          <p className="mt-6 text-[17px] text-paper/70 max-w-[60ch]">
+          <p className="font-luxury-readable mt-6 text-[17px] text-paper/70 max-w-[60ch]">
             A weekly meeting for <strong className="font-semibold text-paper">founders building real things</strong>.
             No theater, no spectators. Hosted by Obadiah every Sunday. Streamed and archived on
-            <strong className="font-semibold text-paper"> YouTube</strong>.
+            <strong className="font-semibold text-gold"> YouTube</strong>.
           </p>
         </div>
       </div>
@@ -50,7 +50,7 @@ export default function FoundersCircle() {
             />
             <div className="absolute inset-0 bg-ink/35" />
             <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-              <div className="text-[11px] tracking-[0.22em] uppercase text-paper/55">
+              <div className="font-label text-[11px] text-paper/55">
                 Founders in the room
               </div>
               <div className="mt-2 max-w-[16rem] text-[20px] leading-tight text-paper sm:max-w-[28rem] sm:text-[24px]">
@@ -67,7 +67,7 @@ export default function FoundersCircle() {
           <div className="pt-4">
             <MagneticButton
               onClick={() => setOpen(true)}
-              className="shimmer-btn inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-paper text-ink text-[13px] font-medium"
+              className="shimmer-btn inline-flex items-center gap-2 rounded-full bg-paper px-6 py-3.5 text-[13px] font-medium text-ink transition-colors duration-200 hover:bg-gold hover:text-ink"
             >
               <>Request a seat <span style={{ fontVariantEmoji: 'text' }}>↗︎</span></>
             </MagneticButton>
@@ -83,7 +83,7 @@ export default function FoundersCircle() {
 function Row({ k, v }: { k: string; v: string }) {
   return (
     <div className="grid min-w-0 grid-cols-[96px_minmax(0,1fr)] gap-4 border-b border-paper/15 pb-4 sm:grid-cols-[110px_minmax(0,1fr)]">
-      <span className="text-[11px] tracking-[0.18em] uppercase text-paper/50">{k}</span>
+      <span className="font-label text-[11px] text-gold">{k}</span>
       <span className="min-w-0 break-words text-[15px] text-paper/95">{v}</span>
     </div>
   )

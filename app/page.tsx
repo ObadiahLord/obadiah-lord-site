@@ -35,7 +35,7 @@ export default function Home() {
             <>
               A tool executes what you hand it. An architect{' '}
               <strong className="font-medium">owns the outcome</strong>. The agents we are building
-              do not wait for instructions on every step — they hold the goal, read the environment,
+              do not wait for instructions on every step. They hold the goal, read the environment,
               and decide what comes next. That is the gap between software that assists and software
               that <strong className="font-medium">actually gets things done</strong>.
             </>
