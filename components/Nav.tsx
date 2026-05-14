@@ -36,11 +36,11 @@ export default function Nav() {
         initial={{ opacity: 0, y: -12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-        className={`fixed top-0 inset-x-0 z-50 flex h-16 items-center justify-between px-4 transition-[background,border-color,box-shadow,backdrop-filter] duration-200 md:h-20 md:px-10 ${
+        className={`fixed top-0 inset-x-0 z-50 flex h-16 items-center justify-between overflow-x-clip px-4 transition-[background,border-color,box-shadow,backdrop-filter] duration-200 md:h-20 md:px-10 ${
           scrolled ? 'nav-surface border-b border-ink/10' : 'border-b border-transparent'
         }`}
       >
-        <a href="#top" onClick={scrollTo('#top')} className="flex items-center -ml-9 md:-ml-12">
+        <a href="#top" onClick={scrollTo('#top')} className="flex shrink-0 items-center md:-ml-12">
           <img
             src="/images/unnamed.png"
             alt="Obadiah Lord"
@@ -94,7 +94,7 @@ export default function Nav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.22 }}
-            className="fixed top-0 inset-x-0 z-40 bg-paper pt-20 pb-8 px-6 flex flex-col border-b border-ink/10 shadow-lg md:hidden"
+            className="fixed top-0 inset-x-0 z-40 flex flex-col overflow-x-clip border-b border-ink/10 bg-paper px-6 pb-8 pt-20 shadow-lg md:hidden"
           >
             {links.map((l) => (
               <a
