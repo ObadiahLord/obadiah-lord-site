@@ -388,7 +388,7 @@ export default function MiniGame() {
     <section className="relative py-24">
       <div className="font-label mb-5 px-5 text-[11px] text-silver md:px-[110px]">Mission briefing</div>
       <div className="select-none w-full" style={{cursor:'pointer'}} onClick={jump}>
-        <canvas ref={canvasRef} width={W} height={H} className="block h-[340px] w-full md:h-auto"
+        <canvas ref={canvasRef} width={W} height={H} className="block h-auto w-full"
           style={{border:'1px solid rgba(10,10,10,0.07)'}} />
       </div>
       <p className="mt-3 px-5 md:px-[110px] text-[11px] tracking-wide text-ink/35">

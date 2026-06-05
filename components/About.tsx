@@ -44,8 +44,7 @@ export default function About() {
 
               <p>
                 <strong className="font-semibold text-ink gold-hover">Mercedes Benz</strong> taught me excellence and presence.
-                <strong className="font-semibold text-ink gold-hover"> Credit Capital</strong> taught me what structure means when people are
-                building something real. <strong className="font-semibold text-ink gold-hover">Leadpilot</strong> pushed me deeper into technology,
+                <strong className="font-semibold text-ink gold-hover"> Leadpilot</strong> pushed me deeper into technology,
                 where communication, automation, and execution started feeling like one language.
               </p>
 
